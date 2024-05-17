@@ -33,7 +33,19 @@
         <dependency>
             <groupId>io.quarkus</groupId>
             <artifactId>quarkus-messaging-amqp</artifactId>
+            <exclusions>
+                <exclusion>
+                    <groupId>org.apache.qpid</groupId>
+                    <artifactId>proton-j</artifactId>
+                </exclusion>
+            </exclusions>
         </dependency>
+        <dependency>
+            <groupId>org.apache.qpid</groupId>
+            <artifactId>proton-j</artifactId>
+            <version>0.34.1-volatile</version>
+        </dependency>
+
         <dependency>
             <groupId>io.quarkus</groupId>
             <artifactId>quarkus-rest</artifactId>
